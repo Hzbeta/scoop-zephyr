@@ -9,8 +9,8 @@ $jsonToDelete = @(
 )
 $jsonRoot = "$PSScriptRoot/.."
 foreach ($json in $jsonToDelete) {
-    if (Test-Path Join-Path $jsonRoot $json) {
-        Remove-Item -Path Join-Path $jsonRoot $json -Force
+    if (Test-Path (Join-Path $jsonRoot $json)) {
+        Remove-Item -Path (Join-Path $jsonRoot $json) -Force
     }
 }
 
