@@ -18,10 +18,10 @@
             "$ahk = @('/script', \"`\"$dir\\installer\\UX\\install.ahk`\"\", '/to', \"`\"$dir`\"\", '/user', '/silent')",
             "if ($global) { $ahk = @('/script', \"`\"$dir\\installer\\UX\\install.ahk`\"\", '/to', \"`\"$dir`\"\", '/silent') }",
             "Start-Process \"$dir\\installer\\AutoHotkey32.exe\" -ArgumentList $ahk -Wait",
-            // Create temporary copy of install-ahk2exe.ahk and modify it to prevent ahk2exe.exe from running and showing a tray tip
+            "# Create temporary copy of install-ahk2exe.ahk and modify it to prevent ahk2exe.exe from running and showing a tray tip"
             "$tempScript = \"$dir\\installer\\UX\\install-ahk2exe.temp.ahk\"",
             "(Get-Content \"$dir\\installer\\UX\\install-ahk2exe.ahk\") -replace 'ShellRun finalPath', '; ShellRun finalPath' -replace 'TrayTip', '; TrayTip' | Set-Content $tempScript",
-            // Run the modified script and wait for it to finish then remove the temporary script
+            "# Run the modified script and wait for it to finish then remove the temporary script"
             "$ahk2exe = @('/script', \"`\"$tempScript`\"\", '/to', \"`\"$dir`\"\", '/silent')",
             "Start-Process \"$dir\\installer\\AutoHotkey32.exe\" -ArgumentList $ahk2exe -Wait",
             "Remove-Item $tempScript -Force"
