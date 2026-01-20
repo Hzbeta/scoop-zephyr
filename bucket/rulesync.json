@@ -1,12 +1,12 @@
 {
-    "version": "5.6.0",
+    "version": "5.7.0",
     "description": "Unified AI rules management CLI tool",
     "homepage": "https://github.com/dyoshikawa/rulesync",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/dyoshikawa/rulesync/releases/download/v5.6.0/rulesync-windows-x64.exe",
-            "hash": "69846998634eae0611b5d60ba87e5458ceb20bbbdee353baa3820b664c610525"
+            "url": "https://github.com/dyoshikawa/rulesync/releases/download/v5.7.0/rulesync-windows-x64.exe",
+            "hash": "574cc7173b000a2ba981b2071f63081fb9c648ad3f73b97b8799fcaea386dcd5"
         }
     },
     "bin": [
